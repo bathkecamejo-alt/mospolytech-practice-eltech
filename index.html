@@ -3,177 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Проект Eltech</title>
+    <title>Eltech | Мобильный клиент Московского Политеха</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <div class="header-container">
-        <h1 class="logo">Eltech</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#about">О проекте</a></li>
-                <li><a href="#team">Участники</a></li>
-                <li><a href="#journal">Журнал</a></li>
-                <li><a href="#resources">Ресурсы</a></li>
-            </ul>
-        </nav>
+    <!-- Left Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1 class="logo">ELTECH<span>.</span></h1>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#" class="nav-item active" onclick="showSection('home', this)">Главная</a></li>
+            <li><a href="#" class="nav-item" onclick="showSection('about', this)">О проекте</a></li>
+            <li><a href="#" class="nav-item" onclick="showSection('team', this)">Участники</a></li>
+            <li><a href="#" class="nav-item" onclick="showSection('gallery', this)">Скриншоты</a></li>
+            <li><a href="#" class="nav-item" onclick="showSection('journal', this)">Журнал</a></li>
+            <li><a href="#" class="nav-item" onclick="showSection('resources', this)">Ресурсы</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <p class="group-info">Группа 251-372</p>
+            <p class="copyright">© 2026 Eltech Project</p>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        
+        <!-- SECTION: HOME -->
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <h2 class="hero-title">Eltech</h2>
+                <p class="hero-subtitle">Современный кроссплатформенный клиент для экосистемы Московского Политеха, построенный на базе Kotlin Multiplatform (KMP).</p>
+            </div>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-label">Стек</span>
+                    <span class="metric-value">KMP & Compose</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Платформы</span>
+                    <span class="metric-value">Android & iOS</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Статус</span>
+                    <span class="metric-value">Open-Source</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: ABOUT -->
+        <section id="about" class="tab-content">
+            <h2 class="section-title">О проекте</h2>
+            <div class="about-grid">
+                <div class="info-card">
+                    <h3>Актуальность</h3>
+                    <p>Отсутствие полноценного мобильного приложения для Московского Политеха создает значительные неудобства при использовании Личного Кабинета со смартфонов. Eltech решает эту проблему, повышая пользовательский опыт студентов и преподавателей.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Цели и Задачи</h3>
+                    <p>Создание единого SDK на базе Kotlin Multiplatform для переноса функционала веб-версии ЛК в мобильный формат с соблюдением строгого визуального стиля университета.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Ожидаемые результаты</h3>
+                    <p>Запуск официального клиента для iOS и Android, обеспечивающего стабильный доступ к расписанию, успеваемости и новостям вуза.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: TEAM -->
+        <section id="team" class="tab-content">
+            <h2 class="section-title">Разработчик</h2>
+            <div class="team-container">
+                <div class="profile-card">
+                    <div class="profile-avatar">CA</div>
+                    <div class="profile-details">
+                        <h3>Сарафанов Алексей Сергеевич</h3>
+                        <p class="role">Инженер по информационной безопасности</p>
+                        <div class="contribution-box">
+                            <strong>Основной вклад:</strong>
+                            <p>Обеспечение безопасности SDK, проектирование механизмов безопасной аутентификации запросов, внедрение алгоритмов хеширования пользовательских данных и соли (hash_salt.txt) для комплексной защиты баз данных и файла students.json.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: GALLERY -->
+        <section id="gallery" class="tab-content">
+    <h2 class="section-title">Скриншоты обучения</h2>
+    <div class="gallery-container">
+        <div class="card premium-card" style="margin-bottom: 25px;">
+            <h3>Профильное мероприятие: Онлайн-конференция с экспертами Яндекс</h3>
+            <p style="margin-top: 10px; color: #a8a8b3; line-height: 1.6;">
+                В рамках прохождения практики было организовано участие в специализированной видеоконференции, посвящённой коммерческой разработке, выстраиванию ИТ-инфраструктуры и современным технологическим стекам в крупных технологических компаниях. Мероприятие дало детальное понимание реальных процессов проектирования, тестирования и развертывания масштабных программных продуктов.
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="img-placeholder">
+                    <span>Скриншот 1</span>
+                </div>
+                <p class="gallery-caption">Онлайн-подключение к трансляции конференции Яндекс</p>
+            </div>
+            <div class="gallery-item">
+                <div class="img-placeholder">
+                    <span>Скриншот 2</span>
+                </div>
+                <p class="gallery-caption">Разбор алгоритмов пространственного ветвления (KD-Tree)</p>
+            </div>
+            <div class="gallery-item">
+                <div class="img-placeholder">
+                    <span>Скриншот 3</span>
+                </div>
+                <p class="gallery-caption">Результаты нагрузочного бенчмаркинга на стенде</p>
+            </div>
+        </div>
     </div>
-</header>
-
-<main>
-    <section id="home" class="section">
-        <div class="container">
-            <h2>Главная</h2>
-            <p><strong>Eltech</strong> — это кроссплатформенное мобильное приложение для Московского Политеха, призванное обеспечить удобный доступ к информации университета со смартфонов.</p>
-            <p>В основе архитектуры лежит технология <strong>Kotlin Multiplatform (KMP)</strong>, позволяющая переиспользовать бизнес-логику через единый SDK, в сочетании с <strong>Jetpack Compose</strong> (Compose Multiplatform) для создания современных пользовательских интерфейсов.</p>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2>О проекте</h2>
-
-            <div class="card">
-                <h3>Обоснование и актуальность</h3>
-                <p>В настоящее время существует проблема отсутствия полноценного мобильного приложения для Московского Политеха, что создает неудобства при использовании Личного Кабинета (ЛК) со смартфонов. Разработка проекта актуальна, так как она значительно повысит пользовательский опыт студентов и преподавателей от взаимодействия с цифровой средой университета.</p>
-            </div>
-
-            <div class="card">
-                <h3>Цели, задачи и результаты</h3>
-                <p><strong>Цель:</strong> Создать полноценное кроссплатформенное мобильное приложение для удобного доступа к информации Московского Политеха со смартфонов.</p>
-                <p><strong>Задачи:</strong></p>
-                <ul>
-                    <li>Перенос основного функционала веб-версии ЛК Московского Политеха в формат мобильного приложения.</li>
-                    <li>Перенос текущего функционала на архитектуру Kotlin Multiplatform (KMP) для создания общей библиотеки и SDK.</li>
-                    <li>Разработка пользовательского интерфейса с дизайном, полностью соответствующим визуальному стилю Московского Политеха.</li>
-                </ul>
-                <p><strong>Ожидаемые результаты:</strong> Дальнейший запуск единого приложения для платформ iOS и Android, а также получение приложением статуса официального клиента университета.</p>
-            </div>
-
-            <div class="card">
-                <h3>Данные менеджера проекта</h3>
-                <p><strong>Руководитель проекта:</strong> Станислав Андреевич Клепиков</p>
-                <p><strong>Полномочия:</strong> Принятие архитектурных решений, управление исходным кодом (GitHub), публикация релизов в магазинах приложений (RuStore, App Store, Google Play), ведение переговоров о присвоении проекту официального статуса.</p>
-            </div>
-
-            <div class="card">
-                <h3>Взаимодействие с организацией-партнёром и Карьерный марафон</h3>
-                <p>В рамках дистанционного участия в карьерных мероприятиях был подробно изучен доклад руководителя службы разработки Яндекс Доставки Александра Голубева «Когда действительно нужны алгоритмы: опыт оптимизации KD-Tree» на технической конференции «Истовый Инженер».</p>
-                <p>В ходе вебинара были освоены следующие ключевые аспекты, применимые к разработке нашего командного SDK для проекта Eltech:</p>
-                <ol>
-                    <li>Теоретическая база пространственного ветвления (KD-Tree) на примере двухмерного пространства (широта и долгота) для поиска ближайших объектов.</li>
-                    <li>Программная реализация алгоритмов обхода с использованием структуры данных std::stack для итеративного обхода узлов и отсечки ложных веток пространства.</li>
-                    <li>Бенчмаркинг и нагрузочное тестирование на специализированном стенде. Анализ перцентилей (50%, 95%, 98%) показал кратное снижение задержек (timings в ms).</li>
-                </ol>
-                <div class="image-gallery">
-                    <figure>
-                        <img src="marathon_1.png" alt="Принцип работы" placeholder="marathon_1.png">
-                        <figcaption>Принцип работы</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="marathon_2.png" alt="Алгоритм обхода" placeholder="marathon_2.png">
-                        <figcaption>Алгоритм обхода</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="marathon_3.png" alt="Результаты на стенде" placeholder="marathon_3.png">
-                        <figcaption>Результаты на стенде</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="team" class="section">
-        <div class="container">
-            <h2>Участники</h2>
-            <p>Мобильное приложение «Eltech» является крупным open-source проектом, над развитием которого трудится команда разработчиков Центр компетенций «ИТ-кластер» Московского Политеха. Состав рабочей группы:</p>
-
-            <div class="grid-container">
-                <div class="team-card">
-                    <h4>Клепиков Станислав</h4>
-                    <p class="role">Руководитель проекта</p>
-                    <p>Общая координация, принятие архитектурных решений, управление исходным кодом на GitHub и публикация релизов.</p>
-                    <p class="contribution">Вклад: 50 часов</p>
-                </div>
-                <div class="team-card">
-                    <h4>Воронин Даниил</h4>
-                    <p class="role">Ведущий разработчик</p>
-                    <p>Проектирование ядра и архитектуры основной библиотеки SDK_Eltech для взаимодействия с внутренними API университета, подготовка базовой технической документации.</p>
-                    <p class="contribution">Вклад: 45 часов</p>
-                </div>
-                <div class="team-card">
-                    <h4>Лёх</h4>
-                    <p class="role">Инженер по информационной безопасности</p>
-                    <p>Обеспечение безопасности SDK, проектирование механизмов безопасной аутентификации запросов, внедрение алгоритмов хеширования и соли (hash_salt.txt) для защиты персональных данных в базах данных и students.json.</p>
-                    <p class="contribution">Вклад: 30 часов</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="journal" class="section">
-        <div class="container">
-            <h2>Журнал</h2>
+</section>
+        <!-- SECTION: JOURNAL -->
+        <section id="journal" class="tab-content">
+            <h2 class="section-title">Журнал прогресса</h2>
             <div class="timeline">
                 <div class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-date">01.03.2026</div>
                     <div class="timeline-content">
-                        <strong>SDK_Eltech:</strong> Начата разработка основной библиотеки (SDK) для взаимодействия с внутренними API университета.<br>
-                        <strong>Документация:</strong> Подготовлено техническое описание базовых методов SDK, описаны структуры запросов и ответов для обеспечения согласованной работы команды.
+                        <h4>SDK_Eltech & Документация</h4>
+                        <p>Начата разработка основной библиотеки (SDK) для взаимодействия с API университета. Подготовлено техническое описание базовых методов и структур запросов.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-date">15.03.2026</div>
                     <div class="timeline-content">
-                        <strong>Экран физической культуры:</strong> Реализован специализированный экран для отслеживания прогресса по физкультуре. Внедрена логика отображения накопленных баллов и посещений занятий на основе данных из личного кабинета.
+                        <h4>Экран физической культуры</h4>
+                        <p>Реализован экран для отслеживания прогресса по физкультуре, включая отображение накопленных баллов и посещений.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-date">26.03.2026</div>
                     <div class="timeline-content">
-                        <strong>Интеграция с LMS:</strong> Реализован базовый функционал взаимодействия с системой управления обучением (LMS/Moodle). Настроены механизмы парсинга учебных материалов и интеграция сессий для бесшовного перехода из приложения к заданиям.
+                        <h4>Интеграция с LMS</h4>
+                        <p>Реализован базовый функционал взаимодействия с Moodle. Настроены механизмы парсинга учебных материалов.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-date">15.04.2026</div>
                     <div class="timeline-content">
-                        <strong>Доменный слой:</strong> Завершена работа над архитектурой Domain Layer. Описаны бизнес-сущности (Entity) и сценарии использования (Use Cases), что позволило отделить логику приложения от деталей реализации инфраструктуры.
+                        <h4>Доменный слой (Domain Layer)</h4>
+                        <p>Завершена работа над архитектурой бизнес-сущностей (Entity) и сценариев использования (Use Cases).</p>
                     </div>
                 </div>
                 <div class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-date">22.04.2026</div>
                     <div class="timeline-content">
-                        <strong>Экран расписания:</strong> Реализована базовая верстка основного экрана приложения. Созданы адаптивные UI-компоненты для карточек занятий, реализована логика отображения текущего дня и переключения между датами.
+                        <h4>Экран расписания</h4>
+                        <p>Реализована базовая верстка основного экрана с адаптивными UI-компонентами и логикой переключения дат.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="resources" class="section">
-        <div class="container">
-            <h2>Ресурсы</h2>
-            <ul class="resource-list">
-                <li><a href="https://mospolytech.ru/" target="_blank" rel="noopener noreferrer">Московский Политех (Официальный сайт)</a></li>
-                <li><a href="https://mospolytech.ru/obuchenie/fakultety-i-instituty/fakultet-it/" target="_blank" rel="noopener noreferrer">Центр компетенций «ИТ-кластер»</a></li>
-                <li><a href="https://kotlinlang.org/docs/multiplatform.html" target="_blank" rel="noopener noreferrer">Официальная документация Kotlin Multiplatform</a></li>
-                <li><a href="https://www.jetbrains.com/kotlin-multiplatform/" target="_blank" rel="noopener noreferrer">JetBrains: Kotlin Multiplatform для iOS и Android</a></li>
-                <li><a href="https://www.jetbrains.com/lp/compose-multiplatform/" target="_blank" rel="noopener noreferrer">Compose Multiplatform Documentation</a></li>
-                <li><a href="https://m3.material.io/" target="_blank" rel="noopener noreferrer">Material Design 3 (Material You)</a></li>
-                <li><a href="https://metaclass.ru/" target="_blank" rel="noopener noreferrer">Metaclass: Android-разработчик с нуля</a></li>
-            </ul>
-        </div>
-    </section>
-</main>
+        <!-- SECTION: RESOURCES -->
+        <section id="resources" class="tab-content">
+            <h2 class="section-title">Полезные ресурсы</h2>
+            
+            <div class="resource-category">
+                <h3>Организация-партнёр</h3>
+                <div class="resource-grid">
+                    <a href="https://mospolytech.ru/" target="_blank" class="res-card">Московский Политех</a>
+                    <a href="https://mospolytech.ru/obuchenie/fakultety-i-instituty/fakultet-it/" target="_blank" class="res-card">Центр компетенций «ИТ-кластер»</a>
+                </div>
+            </div>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2026 Центр компетенций «ИТ-кластер» Московского Политеха. Проект Eltech.</p>
-    </div>
-</footer>
+            <div class="resource-category">
+                <h3>Kotlin Multiplatform</h3>
+                <div class="resource-grid">
+                    <a href="https://kotlinlang.org/docs/multiplatform.html" target="_blank" class="res-card">Официальная документация KMP</a>
+                    <a href="https://www.jetbrains.com/kotlin-multiplatform/" target="_blank" class="res-card">KMP для iOS и Android</a>
+                    <a href="https://www.jetbrains.com/lp/compose-multiplatform/" target="_blank" class="res-card">Compose Multiplatform</a>
+                    <a href="https://github.com/terrakok/kmp-awesome" target="_blank" class="res-card">KMP Awesome List</a>
+                </div>
+            </div>
 
+            <div class="resource-category">
+                <h3>Android разработка</h3>
+                <div class="resource-grid">
+                    <a href="https://developer.android.com/" target="_blank" class="res-card">Android Developers</a>
+                    <a href="https://m3.material.io/" target="_blank" class="res-card">Material Design 3</a>
+                    <a href="https://developer.android.com/modern-android-development" target="_blank" class="res-card">Modern Android Dev (MAD)</a>
+                </div>
+            </div>
+
+            <div class="resource-category">
+                <h3>Обучающие курсы и статьи</h3>
+                <div class="resource-grid">
+                    <a href="https://metaclass.ru/" target="_blank" class="res-card">Metaclass: Android с нуля</a>
+                    <a href="https://medium.com/tag/kotlin-multiplatform" target="_blank" class="res-card">Medium: KMP Topic</a>
+                    <a href="https://habr.com/ru/hub/mobile_dev/" target="_blank" class="res-card">Habr: Мобильная разработка</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showSection(sectionId, element) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.tab-content');
+            sections.forEach(section => {
+                section.classList.remove('active');
+                section.style.display = 'none';
+            });
+
+            // Show target section
+            const targetSection = document.getElementById(sectionId);
+            targetSection.classList.add('active');
+            targetSection.style.display = 'block';
+
+            // Update active nav link
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // Initialize first section
+        window.onload = () => {
+            showSection('home', document.querySelector('.nav-item.active'));
+        };
+    </script>
 </body>
 </html>

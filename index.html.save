@@ -1,0 +1,58 @@
+DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eltech - Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Eltech</div>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="about.html">О проекте</a></li>
+                <li><a href="team.html">Участники</a></li>
+                <li><a href="journal.html">Журнал</a></li>
+                <li><a href="resources.html">Ресурсы</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <p>Группа 251-372</p>
+            <p>&copy; 2026</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <h1 class="page-title">Eltech</h1>
+        <p class="page-subtitle">Кроссплатформенное мобильное приложение для Московского Политеха на Kotlin Multiplatform (KMP)</p>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h3>Технологии</h3>
+                <p>KMP &amp; Compose</p>
+            </div>
+            <div class="metric-card">
+                <h3>Платформы</h3>
+                <p>Android &amp; iOS</p>
+            </div>
+            <div class="metric-card">
+                <h3>Статус</h3>
+                <p>Open-Source</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Добро пожаловать</h2>
+            <p>В настоящее время существует проблема отсутствия полноценного мобильного приложения для Московского Политеха, что создает неудобства при использовании Личного Кабинета (ЛК) со смартфонов. Разработка проекта актуальна, так как она значительно повысит пользовательский опыт студентов и преподавателей от взаимодействия с цифровой средой университета.</p>
+            <br>
+            <a href="about.html" class="btn">Узнать больше</a>
+        </div>
+    </main>
+
+</body>
+</html>
